@@ -47,9 +47,13 @@ class Twist {
       }Processing for Account ${accountIndex + 1} ${
         ConsoleColors.BLACK
       }=============${ConsoleColors.RESET}
-┌ ${ConsoleColors.GREEN}Address      : ${ConsoleColors.DIM_YELLOW}${address}${
-        ConsoleColors.RESET
-      }
+┌ ${ConsoleColors.GREEN}Address      : ${
+        ConsoleColors.DIM_YELLOW
+      }${address.substring(0, 12)}...${address
+        .slice(-12)
+        .split("")
+        .reverse()
+        .join("")}${ConsoleColors.RESET}
 └ ${ConsoleColors.GREEN}Balance      :${ConsoleColors.RESET} ┌ ${
         ConsoleColors.DIM_YELLOW
       }${suiBalanceStr}${ConsoleColors.RESET}

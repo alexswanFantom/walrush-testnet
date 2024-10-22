@@ -126,7 +126,7 @@ export class Helper {
     return compareDate.getTime() === today.getTime();
   }
 
-  static showSkelLogo() {
+  static showLogo() {
     class ConsoleColors {
       static RED = "\x1b[31m";
       static GREEN = "\x1b[32m";

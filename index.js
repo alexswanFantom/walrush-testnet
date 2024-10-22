@@ -91,7 +91,7 @@ async function startBot() {
   try {
     Logger.clear();
     Logger.info("Application Started");
-    Helper.showSkelLogo();
+    Helper.showLogo();
 
     if (privateKey.length < 1) {
       throw new Error("Please set up accounts.js first");

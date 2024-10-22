@@ -391,7 +391,7 @@ export default class Core {
       await Helper.delay(
         3000,
         this.acc,
-        `Tx Executed : ${RPC.EXPLORER}txblock/${result.digest}`,
+        `Tx Executed : ${result.digest}`,
         this
       );
       await this.getBalance();
