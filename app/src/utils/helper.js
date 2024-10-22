@@ -135,25 +135,9 @@ export class Helper {
       static RESET = "\x1b[0m"; // Reset to default color
     }
 
-    // function centerLog(message) {
-    //   const width = process.stdout.columns;
-    //   const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
-    //   const centeredMessage = " ".repeat(padding) + message;
-    //   console.log(centeredMessage);
-    // }
-
     function centerLog(message) {
-      const width = process.stdout.columns || 80; // Fallback to a default width if not available
-      const messageLength = message.length;
-
-      // If the terminal width is less than the message length, just print the message
-      if (width <= messageLength) {
-        console.log(message);
-        return;
-      }
-
-      // Calculate padding, ensuring it's non-negative
-      const padding = Math.floor((width - messageLength) / 2);
+      const width = process.stdout.columns;
+      const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
       const centeredMessage = " ".repeat(padding) + message;
       console.log(centeredMessage);
     }
