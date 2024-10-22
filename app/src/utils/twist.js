@@ -72,7 +72,9 @@ class Twist {
 └ ${ConsoleColors.GREEN}Delay        :${ConsoleColors.RESET} ${
         ConsoleColors.DIM_YELLOW
       }${delay}${ConsoleColors.RESET}
-${ConsoleColors.BLACK}==========================================\n\n`,
+${ConsoleColors.BLACK}==========================================\n\n${delay}${
+        ConsoleColors.RESET
+      }`,
     });
   }
 
@@ -83,7 +85,7 @@ ${ConsoleColors.BLACK}==========================================\n\n`,
       text: `
 ==============================================
 Info : ${message}
-==============================================`,
+==============================================${delay}${ConsoleColors.RESET}`,
     });
   }
 
