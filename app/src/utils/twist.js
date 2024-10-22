@@ -42,10 +42,10 @@ class Twist {
     this.twisters.put(accountKey, {
       spinner: "dots", // Change this to your preferred spinner
       color: "cyan",
-      text: `${ConsoleColors.BLACK}============= ${
+      text: `${ConsoleColors.WHITE}============= ${
         ConsoleColors.GREEN
       }Processing for Account ${accountIndex + 1} ${
-        ConsoleColors.BLACK
+        ConsoleColors.WHITE
       }=============${ConsoleColors.RESET}
 ┌ ${ConsoleColors.GREEN}Address      : ${
         ConsoleColors.DIM_YELLOW
@@ -72,7 +72,7 @@ class Twist {
 └ ${ConsoleColors.GREEN}Delay        :${ConsoleColors.RESET} ${
         ConsoleColors.DIM_YELLOW
       }${delay}${ConsoleColors.RESET}
-${ConsoleColors.BLACK}==========================================${
+${ConsoleColors.WHITE}==========================================${
         ConsoleColors.RESET
       }\n\n`,
     });
