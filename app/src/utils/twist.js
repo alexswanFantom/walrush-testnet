@@ -42,11 +42,11 @@ class Twist {
     this.twisters.put(accountKey, {
       spinner: "dots", // Change this to your preferred spinner
       color: "cyan",
-      text: `${ConsoleColors.WHITE}============= ${
+      text: `${ConsoleColors.WHITE}=============== ${
         ConsoleColors.GREEN
       }Processing for Account ${accountIndex + 1} ${
         ConsoleColors.WHITE
-      }=============${ConsoleColors.RESET}
+      }===============${ConsoleColors.RESET}
 ┌ ${ConsoleColors.GREEN}Address      : ${
         ConsoleColors.DIM_YELLOW
       }${address.substring(0, 12)}...${address
