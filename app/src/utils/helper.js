@@ -147,12 +147,13 @@ export class Helper {
       const messageLength = message.length;
 
       // If the terminal width is less than the message length, just print the message
-      if (width < messageLength) {
+      if (width <= messageLength) {
         console.log(message);
         return;
       }
 
-      const padding = Math.max(Math.floor((width - messageLength) / 2), 0); // Ensure padding is non-negative
+      // Calculate padding, ensuring it's non-negative
+      const padding = Math.floor((width - messageLength) / 2);
       const centeredMessage = " ".repeat(padding) + message;
       console.log(centeredMessage);
     }
