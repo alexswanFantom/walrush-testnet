@@ -8,4 +8,4 @@
  * ];
  */
 
-export const privateKey = [""];
+export const privateKey = ["privateKey"];

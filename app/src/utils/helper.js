@@ -133,47 +133,28 @@ export class Helper {
       static WHITE = "\x1b[37m";
       static BLACK = "\x1b[30m";
       static RESET = "\x1b[0m"; // Reset to default color
+      static boldStart = "\x1b[1m";
     }
 
-    function centerLog(message) {
-      const width = process.stdout.columns;
-      const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
-      const centeredMessage = " ".repeat(padding) + message;
-      console.log(centeredMessage);
-    }
+    console.log(
+      `
+   █████████   █████ ███████████   ██████████   ███████████      ███████    ███████████       █████████    █████████    █████████
+  ███░░░░░███ ░░███ ░░███░░░░░███ ░░███░░░░███ ░░███░░░░░███   ███░░░░░███ ░░███░░░░░███     ███░░░░░███  ███░░░░░███  ███░░░░░███
+ ░███    ░███  ░███  ░███    ░███  ░███   ░░███ ░███    ░███  ███     ░░███ ░███    ░███    ░███    ░███ ░███    ░░░  ███     ░░░
+ ░███████████  ░███  ░██████████   ░███    ░███ ░██████████  ░███      ░███ ░██████████     ░███████████ ░░█████████ ░███         
+ ░███░░░░░███  ░███  ░███░░░░░███  ░███    ░███ ░███░░░░░███ ░███      ░███ ░███░░░░░░      ░███░░░░░███  ░░░░░░░░███░███         
+ ░███    ░███  ░███  ░███    ░███  ░███    ███  ░███    ░███ ░░███     ███  ░███            ░███    ░███  ███    ░███░░███     ███
+ █████   █████ █████ █████   █████ ██████████   █████   █████ ░░░███████░   █████           █████   █████░░█████████  ░░█████████
+ ░░░░░   ░░░░░ ░░░░░ ░░░░░   ░░░░░ ░░░░░░░░░░   ░░░░░   ░░░░░    ░░░░░░░    ░░░░░           ░░░░░   ░░░░░  ░░░░░░░░░    ░░░░░░░░░  
+`
+    );
+    console.log(`${ConsoleColors.boldStart}┌                                             ┐${ConsoleColors.RESET}
+    ${ConsoleColors.BLACK}BOT              : ${ConsoleColors.GREEN}WALRUS TESTNET BOT 
+    ${ConsoleColors.BLACK}Telegram Channel : ${ConsoleColors.GREEN}@airdropasc               
+    ${ConsoleColors.BLACK}Telegram Group   : ${ConsoleColors.GREEN}@autosultan_group${ConsoleColors.RESET}         
+${ConsoleColors.boldStart}└                                             ┘${ConsoleColors.RESET}`);
 
-    centerLog(
-      `${ConsoleColors.RED}   █████████   █████ ███████████   ██████████   ███████████      ███████    ███████████       █████████    █████████    █████████`
-    );
-    centerLog(
-      `${ConsoleColors.RED}  ███░░░░░███ ░░███ ░░███░░░░░███ ░░███░░░░███ ░░███░░░░░███   ███░░░░░███ ░░███░░░░░███     ███░░░░░███  ███░░░░░███  ███░░░░░███`
-    );
-    centerLog(
-      `${ConsoleColors.RED} ░███    ░███  ░███  ░███    ░███  ░███   ░░███ ░███    ░███  ███     ░░███ ░███    ░███    ░███    ░███ ░███    ░░░  ███     ░░░`
-    );
-    centerLog(
-      `${ConsoleColors.RED} ░███████████  ░███  ░██████████   ░███    ░███ ░██████████  ░███      ░███ ░██████████     ░███████████ ░░█████████ ░███         `
-    );
-    centerLog(
-      `${ConsoleColors.WHITE} ░███░░░░░███  ░███  ░███░░░░░███  ░███    ░███ ░███░░░░░███ ░███      ░███ ░███░░░░░░      ░███░░░░░███  ░░░░░░░░███░███         `
-    );
-    centerLog(
-      `${ConsoleColors.WHITE} ░███    ░███  ░███  ░███    ░███  ░███    ███  ░███    ░███ ░░███     ███  ░███            ░███    ░███  ███    ░███░░███     ███`
-    );
-    centerLog(
-      `${ConsoleColors.WHITE} █████   █████ █████ █████   █████ ██████████   █████   █████ ░░░███████░   █████           █████   █████░░█████████  ░░█████████`
-    );
-    centerLog(
-      `${ConsoleColors.WHITE} ░░░░░   ░░░░░ ░░░░░ ░░░░░   ░░░░░ ░░░░░░░░░░   ░░░░░   ░░░░░    ░░░░░░░    ░░░░░           ░░░░░   ░░░░░  ░░░░░░░░░    ░░░░░░░░░  `
-    );
-    centerLog(` `);
-    centerLog(
-      `${ConsoleColors.BLACK}Telegram Channel : ${ConsoleColors.GREEN}@airdropasc               `
-    );
-    centerLog(
-      `${ConsoleColors.BLACK}Telegram Group   : ${ConsoleColors.GREEN}@autosultan_group${ConsoleColors.RESET}         `
-    );
-    centerLog(` `);
-    centerLog(` `);
+    console.log(` `);
+    console.log(` `);
   }
 }

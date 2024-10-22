@@ -47,29 +47,29 @@ class Twist {
       }Processing for Account ${accountIndex + 1} ${
         ConsoleColors.WHITE
       }===============${ConsoleColors.RESET}
-┌ ${ConsoleColors.GREEN}Address      : ${
+  ┌ ${ConsoleColors.GREEN}Address      : ${
         ConsoleColors.DIM_YELLOW
       }${address.substring(0, 12)}...${address
         .slice(-12)
         .split("")
         .reverse()
         .join("")}${ConsoleColors.RESET}
-└ ${ConsoleColors.GREEN}Balance      :${ConsoleColors.RESET} ┌ ${
+  └ ${ConsoleColors.GREEN}Balance      :${ConsoleColors.RESET} ┌ ${
         ConsoleColors.DIM_YELLOW
       }${suiBalanceStr}${ConsoleColors.RESET}
-                 └ ${ConsoleColors.DIM_YELLOW}${walBalanceStr}${
+                   └ ${ConsoleColors.DIM_YELLOW}${walBalanceStr}${
         ConsoleColors.RESET
       }
-├ ${ConsoleColors.GREEN}SWAP Count   : ${ConsoleColors.DIM_YELLOW}${
+  ├ ${ConsoleColors.GREEN}SWAP Count   : ${ConsoleColors.DIM_YELLOW}${
         accountData.txCount ?? 0
       } / ${Config.SWAPCOUNT} ${
         (accountData.txCount ?? 0) == Config.SWAPCOUNT ? "Finished" : ""
       }${ConsoleColors.RESET}
-               
-┌ ${ConsoleColors.GREEN}Status       :${ConsoleColors.RESET} ${
+                
+  ┌ ${ConsoleColors.GREEN}Status       :${ConsoleColors.RESET} ${
         ConsoleColors.DIM_YELLOW
       }${status}${ConsoleColors.RESET}
-└ ${ConsoleColors.GREEN}Delay        :${ConsoleColors.RESET} ${
+  └ ${ConsoleColors.GREEN}Delay        :${ConsoleColors.RESET} ${
         ConsoleColors.DIM_YELLOW
       }${delay}${ConsoleColors.RESET}
 ${ConsoleColors.WHITE}==========================================${
