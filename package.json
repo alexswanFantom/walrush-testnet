@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexswanFantom/walrush.git"
+    "url": "git+https://github.com/alexswanFantom/walrush-testnet.git"
   },
   "dependencies": {
     "@mysten/sui": "^1.13.0",
