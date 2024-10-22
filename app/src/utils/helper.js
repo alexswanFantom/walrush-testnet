@@ -135,6 +135,13 @@ export class Helper {
       static RESET = "\x1b[0m"; // Reset to default color
     }
 
+    // function centerLog(message) {
+    //   const width = process.stdout.columns;
+    //   const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
+    //   const centeredMessage = " ".repeat(padding) + message;
+    //   console.log(centeredMessage);
+    // }
+
     function centerLog(message) {
       const width = process.stdout.columns;
       const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative

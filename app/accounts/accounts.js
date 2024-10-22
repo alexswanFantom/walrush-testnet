@@ -8,4 +8,6 @@
  * ];
  */
 
-export const privateKey = ["privateKey"];
+export const privateKey = [
+  "suiprivkey1qq0addddu7kwdqvmx2yhuj2898t8n7729qukms77eztchvx26ndy2pedegp",
+];
