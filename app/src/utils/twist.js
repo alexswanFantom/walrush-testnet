@@ -72,9 +72,9 @@ class Twist {
 └ ${ConsoleColors.GREEN}Delay        :${ConsoleColors.RESET} ${
         ConsoleColors.DIM_YELLOW
       }${delay}${ConsoleColors.RESET}
-${ConsoleColors.BLACK}==========================================\n\n${delay}${
+${ConsoleColors.BLACK}==========================================${
         ConsoleColors.RESET
-      }`,
+      }\n\n`,
     });
   }
 

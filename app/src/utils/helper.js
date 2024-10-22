@@ -137,7 +137,7 @@ export class Helper {
 
     function centerLog(message) {
       const width = process.stdout.columns;
-      const padding = Math.floor((width - message.length) / 2);
+      const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
       const centeredMessage = " ".repeat(padding) + message;
       console.log(centeredMessage);
     }
