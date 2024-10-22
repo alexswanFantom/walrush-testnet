@@ -143,8 +143,16 @@ export class Helper {
     // }
 
     function centerLog(message) {
-      const width = process.stdout.columns;
-      const padding = Math.max(Math.floor((width - message.length) / 2), 0); // Ensure padding is non-negative
+      const width = process.stdout.columns || 80; // Fallback to a default width if not available
+      const messageLength = message.length;
+
+      // If the terminal width is less than the message length, just print the message
+      if (width < messageLength) {
+        console.log(message);
+        return;
+      }
+
+      const padding = Math.max(Math.floor((width - messageLength) / 2), 0); // Ensure padding is non-negative
       const centeredMessage = " ".repeat(padding) + message;
       console.log(centeredMessage);
     }
