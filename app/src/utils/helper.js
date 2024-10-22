@@ -136,12 +136,12 @@ export class Helper {
     }
 
     function centerLog(message) {
-      const width = process.stdout.columns;
-      const padding = Math.floor((width - message.length) / 2);
-      const centeredMessage = " ".repeat(padding) + message;
+      const width = process.stdout.columns || 80; // Fallback to a default width if undefined
+      const padding = Math.max(0, Math.floor((width - message.length) / 2)); // Ensure padding is not negative
+      const centeredMessage = " ".repeat(padding) + message; 
       console.log(centeredMessage);
     }
-
+    
     centerLog(
       `${ConsoleColors.RED}   █████████   █████ ███████████   ██████████   ███████████      ███████    ███████████       █████████    █████████    █████████`
     );
